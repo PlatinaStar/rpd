@@ -24,7 +24,8 @@
         <h1>[REDACTED]</h1>
         <p>[REDACTED]</p>
         <button type="button" onclick="playMusic();" class="button">Reveal</button>
-        <div class="event">
+        <div class="event" id="x">
+            <button type="button" class="a" id="box">X</button>
             <h1 class="ev">Planning a trip? Family? School? Friends?</h1>
             <p class="ev">On the 6th of September 2069 to the 20th of September, there's an event coming. Sign up for a fun time.</p>
             <a href="https://youtu.be/YRvOePz2OqQ" class="eventButton">Sign up</a>
@@ -34,7 +35,13 @@
             var music = new Audio('NO.mp3');
             music.play();
             }
+            
+            const box = document.getElementById('box');
+            box.addEventListener('click', () => {
+                const x = document.getElementById('x');
+                x.remove();
+            });
         </script>
-        <footer>Email: info@rpd.org Tel.: (+0) 000 00 04</footer>
+        <footer>Email: info@rpd.gov Tel.: (+0) 000 00 04</footer>
     </body>
 </html>
